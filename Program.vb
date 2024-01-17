@@ -1,7 +1,9 @@
-Imports System
+﻿Imports System
+Imports System.Text
 
 Module Program
     Sub Main(args As String())
+        Console.OutputEncoding = Encoding.UTF8
         Console.WriteLine("
  _       __     __                             __           __  ____               _____                                      ________    ____
 | |     / /__  / /________  ____ ___  ___     / /_____     /  |/  (_)___  ___     / ___/      _____  ___  ____  ___  _____   / ____/ /   /  _/
@@ -17,7 +19,7 @@ Module Program
      /___/                     
         ")
         Console.Write("
-The Project's GitHub Repo: https://github.com/B0tCreati0n/Minesweeper-CLI-/
+The Project's GitHub Repo: https://github.com/B0tCreati0n/Minesweeper-CLI/
 
 Find me here:
 GitHub: https://github.com/B0tCreati0n/
@@ -35,7 +37,7 @@ Session Privat Messenger: 05fd663352e7c37cc2f26785ce2f8313d7a4d0a5e99b3c7cf9c444
             mapSize = Console.ReadLine()
 
             If mapSize >= 100 Then
-                Console.WriteLine("The max map size is 99x99 or lower")
+                Console.WriteLine("The max map size is 99x99 or lower💣")
             ElseIf mapSize <= 1 Then
                 Console.WriteLine("The minimum map size is 2x2")
             Else
@@ -64,7 +66,7 @@ Session Privat Messenger: 05fd663352e7c37cc2f26785ce2f8313d7a4d0a5e99b3c7cf9c444
         Dim rand As New Random()
 
         For i As Integer = 0 To mapSize - 1
-            ' Generate random coordinates within the map size
+            ' Generate random coordinates within the map
             Dim x As Integer = rand.Next(1, mapSize + 1)
             Dim y As Integer = rand.Next(1, mapSize + 1)
 
