@@ -1,15 +1,21 @@
-﻿Imports System.Text
+﻿'TODO:
+'1. Fix the "check" command | When you die you cannot choose a new mapSize
+'2. Fix the "setFlag" || "removeFlag" command | Either does not work
+
+Imports System.Text
 
 Module Program
+    Dim mapSize As Integer ' Declare mapSize outside the loop
+
     Sub Main(args As String())
         Console.OutputEncoding = Encoding.UTF8
 
-        CConsole.WriteLine("
+        Console.WriteLine("
  _       __     __                             __           __  ____               _____                                      ________    ____
 | |     / /__  / /________  ____ ___  ___     / /_____     /  |/  (_)___  ___     / ___/      _____  ___  ____  ___  _____   / ____/ /   /  _/
 | | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \   / __/ __ \   / /|_/ / / __ \/ _ \    \__ \ | /| / / _ \/ _ \/ __ \/ _ \/ ___/  / /   / /    / /  
 | |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /_/ /_/ /  / /  / / / / / /  __/   ___/ / |/ |/ /  __/  __/ /_/ /  __/ /     / /___/ /____/ /   
-|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/  /_/  /_/_/_/ /_/\___/   /____/|__/|__/\___/\___/ .___/\___/_/      \____/_____/___/   
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/  /_/  /_/_/_/ /_/\___/   /____/|__/|__/\___/\___ .___/\___/_/      \____/_____/___/   
                                                                                                       /_/                                     ")
         Console.Write("
    ___         ___  ___  __    _____             __  _ ___     
@@ -26,15 +32,14 @@ GitHub: https://github.com/B0tCreati0n/
 Stack Overflow: https://stackoverflow.com/users/15663690/b0t-creati0n
 Discord: @b0tcreati0n
 Session Privat Messenger: 05fd663352e7c37cc2f26785ce2f8313d7a4d0a5e99b3c7cf9c4441ece63a93051
+OBS! You may not be able to see all the carectors if not run in Windows Terminal, win11: pre-installed, Win10: Not pre-installed must be download from the microsoft store
 
 
 
 ")
-        Console.Write("Before we start, please set your cmd font to ")
-        Dim mapSize As Integer
 
         Do
-            Console.Write("What is your preferred map size? 💣⚑")
+            Console.Write("What is your preferred map size?")
             mapSize = Console.ReadLine()
 
             If mapSize >= 100 Then
